@@ -1,0 +1,36 @@
+---
+title: "notebook"
+output: html_document
+---
+
+# 2026 summer project notebook
+
+## Introduction and aim
+
+Last year, for my dissertation, I made a pipeline that took bacterial genomic accessions from the NCBI repository, translated them, annotated them, then compared over-representation of genes between host groups to look for signs of adaptation to "specific" (at the class level) host microbiomes.
+
+In the summer, I would like to train up my coding skills by remaking the pipeline and this time, instead of focussing on what is scientifically required or sound, focussing on what is the most technologically fancy and complex. Like bigger automation, using functions in R, etc, as mentioned, to build up skills, and for a bit of fun.
+
+It doesnt need to follow the exact same analysis as the dissertation, as that would be good from a reproducability standpoint in making me think about parameters instead of hard-coded values. Especially considering that I might not get access to Falcon until I begin the masters, this might have to be metadata-oriented, so, probably should start there.
+
+## Summary of steps and ideas for how to improve them (metadata only)
+
+### global or general changes
+- [ ] make the workflow useable with "targets" R package, which will make running code blocks to look for errors much easier as it caches the results of already ran and unchanged operations, also, needs functions for some reason
+
+- [ ] to trial run the below steps, just pull down 1 file and see if we think all the below can be applied to them at scale, after choosing a repository we want, like the EMBL EBI one.
+ 
+### 1. Getting metadata off of the repository
+
+- [ ] Step 1 is going to be selecting a repository that looks good to use, could use NCBI, but might as well switch it, could have done that at the start of dissertation if I wanted
+
+- [ ] Fanciest way to do it is probably still calling the REST API, but maybe, like in Y2, We can functionise and parameterise it, so it is reproducable to different needs
+
+- [ ] the next consideration is how do we store the result of the API pull once it is down, like in a SQL database, or as RDS files in a repository
+
+### 2. pulling important information from the metadata
+
+- [ ] Step 1, figure out what the information contained in the files means, and decide what an end user might want to know from that
+
+- [ ] 
+### 3. making visualisations from that information
